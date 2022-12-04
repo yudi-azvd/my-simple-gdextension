@@ -1,0 +1,7 @@
+#ifndef MYSIMPLEGDEXTENSION_REGISTER_TYPES_H_INCLUDED
+#define MYSIMPLEGDEXTENSION_REGISTER_TYPES_H_INCLUDED
+
+void initialize_example_module();
+void uninitialize_example_module();
+
+#endif // MYSIMPLEGDEXTENSION_REGISTER_TYPES_H_INCLUDED

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c381jg6bjhssy"]
+
+[ext_resource type="Texture2D" uid="uid://spngu5fnsj34" path="res://i-build-cool-shit.jpg" id="1_xfbkb"]
+
+[node name="Main" type="Node2D"]
+
+[node name="MySimpleGdextension" type="MySimpleGdextension" parent="."]
+position = Vector2(0.999985, 0.999985)
+scale = Vector2(0.258333, 0.258333)
+texture = ExtResource("1_xfbkb")
+centered = false
