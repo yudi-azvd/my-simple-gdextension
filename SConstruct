@@ -12,22 +12,8 @@ env = SConscript("godot-cpp/SConstruct")
 # - CPPDEFINES are for pre-processor defines
 # - LINKFLAGS are for linking flags
 
-godot_headers_path = "godot-cpp/godot-headers/"
-cpp_bindings_path = "godot-cpp/"
-cpp_library = "godot-cpp"
-
-env.Append(CPPPATH=['.', godot_headers_path, 
-    cpp_bindings_path + 'include/', 
-    cpp_bindings_path + 'include/core/', 
-    cpp_bindings_path + 'include/gen/', 
-    # Added
-    cpp_bindings_path + 'gen/include/',
-    cpp_bindings_path + 'gen/include/godot_cpp/classes/',
-])
-
-
 # tweak this if you want to use different folders, or more folders, to store your source code in.
-# env.Append(CPPPATH=["src/"])
+env.Append(CPPPATH=["src/"])
 sources = Glob("src/*.cpp")
 
 if env["platform"] == "macos":

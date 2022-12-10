@@ -1,7 +1,7 @@
 #ifndef MYSIMPLEGDEXTENSION_H_INCLUDED
 #define MYSIMPLEGDEXTENSION_H_INCLUDED
 
-#include <sprite2d.hpp>
+#include <godot_cpp/classes/sprite2d.hpp>
 
 namespace godot
 {
