@@ -11,10 +11,10 @@ namespace godot
     private:
         float time_passed;
         float amplitude;
+        float speed;
 
     protected:
         static void _bind_methods();
-        static void _register_methods();
 
     public:
         MySimpleGdextension();
@@ -23,6 +23,10 @@ namespace godot
         void _init();
 
         void _process(float delta);
+        void set_amplitude(const float p_amplitude);
+        float get_amplitude() const;
+        void set_speed(const float p_speed);
+        float get_speed() const;
     };
 }
 

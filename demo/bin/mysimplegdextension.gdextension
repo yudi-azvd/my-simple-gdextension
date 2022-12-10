@@ -4,4 +4,4 @@ entry_symbol = "example_library_init"
 
 [libraries]
 
-linux.x86_64.debug="res://bin/linux/libmysimplegdextension.so"
+linux.x86_64.debug="res://bin/linux/libmysimplegdextension.linux.x86_64.so"

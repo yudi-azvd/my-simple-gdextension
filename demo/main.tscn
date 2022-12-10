@@ -5,7 +5,9 @@
 [node name="Main" type="Node2D"]
 
 [node name="MySimpleGdextension" type="MySimpleGdextension" parent="."]
-position = Vector2(0.999985, 0.999985)
+amplitude = 50.0
+speed = 0.1
+position = Vector2(99.4081, 93.6806)
 scale = Vector2(0.258333, 0.258333)
 texture = ExtResource("1_xfbkb")
 centered = false
