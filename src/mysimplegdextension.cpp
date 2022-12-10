@@ -16,6 +16,8 @@ void MySimpleGdextension::_bind_methods()
     ClassDB::bind_method(D_METHOD("get_speed"), &MySimpleGdextension::get_speed);
     ClassDB::bind_method(D_METHOD("set_speed", "p_speed"), &MySimpleGdextension::set_speed);
     ClassDB::add_property("MySimpleGdextension", PropertyInfo(Variant::FLOAT, "speed"), "set_speed", "get_speed");
+    
+    ADD_SIGNAL(MethodInfo("position_changed", PropertyInfo(Variant::OBJECT, "node"), PropertyInfo(Variant::VECTOR2, "new_pos")));
 }
 
 MySimpleGdextension::MySimpleGdextension()
@@ -31,6 +33,7 @@ MySimpleGdextension::~MySimpleGdextension()
 
 void MySimpleGdextension::_init()
 {
+    time_emit = 0;
     time_passed = 0;
     amplitude = 10;
     speed = 1.0;
@@ -45,6 +48,12 @@ void MySimpleGdextension::_process(float delta)
         amplitude + (amplitude * cos(time_passed * 1.5)));
 
     set_position(new_position);
+
+    time_emit += delta;
+    if (time_emit > 1.0) {
+        emit_signal("position_changed", this, new_position);
+        time_emit = 0.0;
+    }
 }
 
 void MySimpleGdextension::set_amplitude(const float p_amplitude) {
